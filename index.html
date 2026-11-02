@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#090d18"><title>SnapFlow</title>
+<link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+</head><body>
+<header class="topbar"><b class="brand">Snap<span>Flow</span></b><button id="timerBtn">3s</button></header>
+<main>
+<section id="homePage" class="page active"><div id="feed" class="feed">
+<img id="photo" alt="SnapFlow photo"><div class="photo-overlay"><div><p id="photoTitle"></p><small id="photoAuthor"></small></div></div>
+<div class="feed-controls"><button id="pauseBtn">Ⅱ</button><button id="nextBtn">↓</button></div><div class="progress-track"><div id="progressBar"></div></div>
+</div><div class="feed-bottom"><span id="feedCount"></span><span id="feedStatus">Auto Play</span></div></section>
+<section id="rewardsPage" class="page"><div class="section-heading"><h2>My Rewards</h2><p>Demo reward points</p></div>
+<div class="reward-card"><p>Total Points</p><h1 id="points">0</h1><small>Local demo balance</small></div>
+<button id="watchRewardBtn" class="primary-btn">Watch Rewarded Ad</button>
+<p class="notice">Demo only. Points have no cash value. Real rewards require verified server-side callbacks.</p><h3>Reward History</h3><div id="rewardHistory" class="history-list"></div></section>
+<section id="profilePage" class="page"><div class="section-heading"><h2>My Profile</h2><p>Your activity</p></div>
+<div class="profile-card"><div class="avatar">S</div><h2 id="username">Guest</h2><button id="changeNameBtn" class="secondary-btn">Change Username</button></div>
+<div class="stats-grid"><div class="stat-card"><strong id="photoViews">0</strong><span>Photo Views</span></div><div class="stat-card"><strong id="adViews">0</strong><span>Ad Events</span></div><div class="stat-card"><strong id="adClicks">0</strong><span>Ad Clicks</span></div><div class="stat-card"><strong id="totalRewards">0</strong><span>Rewards</span></div></div>
+<h3>Export Activity</h3><div class="export-grid"><button id="exportCSV" class="secondary-btn">CSV</button><button id="exportExcel" class="secondary-btn">Excel</button><button id="exportJSON" class="secondary-btn">JSON</button></div><h3>Settings</h3><button id="timerSettingBtn" class="secondary-btn setting-btn">Change Auto Timer</button></section>
+</main>
+<nav class="bottom-nav"><button class="nav-btn active" data-page="homePage">⌂<small>Home</small></button><button class="nav-btn" data-page="rewardsPage">◇<small>Rewards</small></button><button class="nav-btn" data-page="profilePage">○<small>Profile</small></button></nav>
+<script src="photos.js"></script><script src="ads.js"></script><script src="app.js"></script></body></html>
